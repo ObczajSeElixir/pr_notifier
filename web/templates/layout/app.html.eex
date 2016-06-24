@@ -20,7 +20,7 @@
           </ul>
         </nav>
         <h1>PR-Notifier</h1>
-        <p>Get your project PRs stats on sloack, quick & easy</p>
+        <p>Get your project PRs stats on slack, quick & easy.</p>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
