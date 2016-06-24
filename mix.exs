@@ -29,7 +29,8 @@ defmodule PrNotifier.Mixfile do
         :gettext,
         :phoenix_ecto,
         :postgrex,
-        :tentacat
+        :tentacat,
+        :oauth2
       ]
     ]
   end
@@ -50,7 +51,8 @@ defmodule PrNotifier.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.9"},
       {:cowboy, "~> 1.0"},
-      {:tentacat, "~> 0.5"}
+      {:tentacat, "~> 0.5"},
+      {:oauth2, "~> 0.5"}
     ]
   end
 
