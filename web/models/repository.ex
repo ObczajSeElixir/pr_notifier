@@ -4,7 +4,8 @@ defmodule PrNotifier.Repository do
   schema "repositories" do
     field :full_name, :string
     field :description, :string
-
+    has_many :project_repositories, PrNotifier.ProjectRepository
+    has_many :projects, through: [:project_repositories, :projects]
     timestamps
   end
 

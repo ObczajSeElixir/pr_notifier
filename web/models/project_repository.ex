@@ -1,14 +1,14 @@
-defmodule PrNotifier.Project do
+defmodule PrNotifier.ProjectRepository do
   use PrNotifier.Web, :model
 
-  schema "projects" do
-    field :name, :string
-    has_many :project_repositories, PrNotifier.ProjectRepository
-    has_many :repositories, through: [:project_repositories, :repository]
+  schema "project_repository" do
+    belongs_to :project, PrNotifier.Project
+    belongs_to :repository, PrNotifier.Repository
+
     timestamps
   end
 
-  @required_fields ~w(name)
+  @required_fields ~w(project_id repository_id)
   @optional_fields ~w()
 
   @doc """
